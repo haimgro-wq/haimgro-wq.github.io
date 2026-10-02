@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>מעבדת פישינג — צביקה הטכנאי</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f3f5f7;color:#17202a;margin:0}.wrap{max-width:1000px;margin:auto;padding:25px}
+.top,.card{background:#fff;border-radius:14px;padding:22px;margin:18px 0;box-shadow:0 2px 10px #0001}.top{background:#17202a;color:#fff}
+.mail{border:1px solid #ddd;border-radius:10px;overflow:hidden}.head{background:#f7f7f7;padding:15px;border-bottom:1px solid #ddd}.body{padding:22px;line-height:1.8}
+button{background:#1769e0;color:#fff;border:0;border-radius:8px;padding:12px 20px;font-size:16px;cursor:pointer}
+.warn{background:#fff4d6;border-right:5px solid #d79b00;padding:12px;margin:12px 0}.ok{background:#e8f7ed;padding:14px;border-radius:8px}
+.danger{background:#fff0f0;padding:14px;border-radius:8px}.hidden{display:none}.point{padding:11px 0;border-bottom:1px solid #eee;line-height:1.6}
+.term{direction:ltr;unicode-bidi:isolate;font-family:monospace;background:#eef1f4;padding:2px 6px;border-radius:4px}
+.small{font-size:14px;color:#667}
+</style></head>
+<body>
+<div class="wrap">
+<div class="top"><h1>מעבדת פישינג — תרגול לטכנאי</h1>
+<p>הדגמה מבוקרת בלבד. אין כאן איסוף סיסמאות, פרטי כרטיס או מידע אישי, וההודעה אינה נשלחת לאף אדם.</p></div>
+
+<div class="card" id="inbox"><h2>תיבת דואר — תרגיל</h2>
+<div class="mail"><div class="head">
+<div><b>שולח:</b> מערכת התראות שירות</div>
+<div><b>נושא:</b> נדרשת בדיקת אבטחה לחשבונך</div>
+<div><b>זמן:</b> היום, 10:14</div></div>
+<div class="body">
+<p>שלום,</p><p>זוהתה פעילות חריגה בחשבונך. כדי למנוע הגבלה זמנית של השירות, יש לבצע בדיקה בתוך 24 שעות.</p>
+<div class="warn"><b>הערה:</b> זהו אימייל מדומה לצורכי לימוד.</div>
+<button onclick="landing()">בדיקת החשבון</button>
+</div></div>
+<p class="small">בתרגיל אמיתי הקישור עלול להיראות אמין. כאן הכפתור נשאר בתוך המעבדה.</p></div>
+
+<div class="card hidden" id="land"><h2>עצור — זו הייתה הדמיית פישינג</h2>
+<p>שלום, אני צביקה, הטכנאי שלך.</p>
+<div class="ok"><b>הכול בסדר.</b><br>לא הזנת כאן סיסמה, לא נלקחו פרטי כרטיס ולא נאסף מידע אישי.</div>
+<p>עכשיו נפרק את ההודעה ונראה מה היה צריך להדליק נורה אדומה.</p>
+<button onclick="analysis()">הצג ניתוח</button></div>
+
+<div class="card hidden" id="an"><h2>הניתוח</h2>
+<div class="point"><b>1. לחץ ודחיפות:</b> "בתוך 24 שעות" מנסה לגרום לנו לפעול לפני שבדקנו.</div>
+<div class="point"><b>2. טענה כללית:</b> "פעילות חריגה" בלי מידע שמאפשר לנו לאמת את האירוע.</div>
+<div class="point"><b>3. קישור:</b> לפני שלוחצים צריך לבדוק לאן הקישור באמת מוביל.</div>
+<div class="point"><b>4. זהות השולח:</b> שם תצוגה אינו הוכחה לזהות. צריך לבדוק את כתובת השולח ואת ההקשר.</div>
+<div class="point"><b>5. דרך בטוחה יותר:</b> להיכנס בעצמנו לאתר הרשמי או לאפליקציה המוכרת, במקום להשתמש בקישור שבאימייל.</div>
+<div class="danger"><b>כלל הזהב:</b><br>קודם מזהים → אחר כך מאמתים דרך מקור עצמאי → ורק אז מבצעים פעולה.</div>
+<h3>החיבור לחומר שלנו</h3>
+<div class="point">כתובת האתר — <span class="term">Domain</span></div>
+<div class="point">חיבור מאובטח — <span class="term">HTTPS</span></div>
+<div class="point">בקשה לדף — <span class="term">HTTP Request</span></div>
+<div class="point">מידע נלווה — <span class="term">HTTP Headers</span></div>
+<div class="point">זיהוי משתמש מחובר — <span class="term">Cookie</span> / <span class="term">Session</span></div>
+<h3>תרגיל לטכנאי</h3><ol><li>מה גרם להודעה להיראות אמינה?</li><li>מה היה צריך לגרום לך לעצור?</li><li>איך היית מאמת את ההודעה בלי להשתמש בקישור?</li><li>איפה היית בודק את הדומיין?</li></ol>
+<p class="small">המעבדה אינה שולחת אימייל ואינה מתחזה בפועל לבנק, לדואר ישראל או לשירות אמיתי.</p></div>
+</div>
+<script>
+function landing(){document.getElementById('land').classList.remove('hidden');document.getElementById('land').scrollIntoView({behavior:'smooth'});}
+function analysis(){document.getElementById('an').classList.remove('hidden');document.getElementById('an').scrollIntoView({behavior:'smooth'});}
+</script>
+</body></html>
